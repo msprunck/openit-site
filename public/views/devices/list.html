@@ -1,0 +1,35 @@
+<section data-ng-controller="DevicesController" data-ng-init="find()">
+<div class="panel panel-default">
+  	<!-- Default panel contents -->
+  	<div class="panel-heading">Devices</div>
+  	
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Key</th>
+				<th />
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="device in devices">
+				<td><a data-ng-href="#!/devices/{{device._id}}/edit">{{device.name}}</a></td>
+				<td>Raspberry Pi</td>
+				<td>{{device.key}}</td>
+				<td>
+					<a class="btn" data-ng-click="remove(device);">
+            			<i class="glyphicon glyphicon-trash"></i>
+        			</a>
+        		</td>
+			</tr>
+			<tr data-ng-hide="!devices || devices.length">
+				<td>No devices yet.</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="panel-footer">
+		<a href="#!/devices/create" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i> New device</a>
+	</div>
+</div>
+</section>
