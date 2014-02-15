@@ -6,7 +6,6 @@ var mongoose = require('mongoose'),
     FacebookStrategy = require('passport-facebook').Strategy,
     GitHubStrategy = require('passport-github').Strategy,
     GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
-    BearerStrategy = require('passport-http-bearer').Strategy,
     User = mongoose.model('User'),
     config = require('./config');
 
