@@ -20,8 +20,8 @@ module.exports = {
         callbackURL: "http://localhost:3000/auth/github/callback"
     },
     google: {
-        clientID: process.env.GOOGLE_APP_ID,
-        clientSecret: process.env.GOOGLE_APP_SECRET,
-        callbackURL: process.env.GOOGLE_CALLBACK
+        clientID: process.env.GOOGLE_APP_ID || "APP_ID" ,
+        clientSecret: process.env.GOOGLE_APP_SECRET || "APP_SECRET",
+        callbackURL: process.env.GOOGLE_CALLBACK || "http://localhost:3000/auth/google/callback"
     }
 }
