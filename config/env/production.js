@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-    db: "mongodb://localhost/openit",
     app: {
         name: "OpenIt - Control your Raspberry Pi"
     },
@@ -21,8 +20,8 @@ module.exports = {
         callbackURL: "http://localhost:3000/auth/github/callback"
     },
     google: {
-        clientID: "APP_ID",
-        clientSecret: "APP_SECRET",
-        callbackURL: "http://localhost:3000/auth/google/callback"
+        clientID: process.env.GOOGLE_APP_ID,
+        clientSecret: process.env.GOOGLE_APP_SECRET,
+        callbackURL: process.env.GOOGLE_CALLBACK
     }
 }
