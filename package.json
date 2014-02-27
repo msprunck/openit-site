@@ -6,7 +6,7 @@
   "author": "Matthieu Sprunck",
   "repository": {
     "type": "git",
-    "url": "https://github.com/msprunck/mean.git"
+    "url": "https://github.com/msprunck/openit-site.git"
   },
   "engines": {
     "node": "0.10.x",
