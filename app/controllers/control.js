@@ -9,8 +9,12 @@
  */
 exports.command = function(req, res) {
     var client = exports.client;
-    var channel = '/control/' + req.params.deviceId + '/' + req.params.command;
-    client.publish(channel, req.body);
+    var channel = '/control/' + req.params.deviceId;
+    var data = {
+    	command: req.params.command,
+    	body: req.body
+    }
+    client.publish(channel, data);
     console.log('Publish to channel: ' + channel);
     res.jsonp({result: 'OK'});
 };
