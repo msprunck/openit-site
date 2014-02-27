@@ -31,7 +31,7 @@ module.exports = function(bayeux, db) {
   			var regExp = /\/control\/(.*)/g;
   			var match = regExp.exec(message.subscription);
   			
-  			if (match && 
+  			if (device && match && 
   				match[1] == device._id) {
   				// Subscription allowed
   			} else {
