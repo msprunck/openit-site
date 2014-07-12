@@ -35,6 +35,7 @@ module.exports = function(bayeux, db) {
   				match[1] == device._id) {
   				// Subscription allowed
   			} else {
+  				console.error('Authentication failed for this device or command (' + message.subscription + ')');
   				message.error = '403::Authentication failed for this device or command';
   			}
   			callback(message);
