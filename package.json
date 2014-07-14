@@ -36,7 +36,9 @@
     "should": "~2.1.1",
     "faye": "~1.0.1",
     "node-uuid": "~1.4.1",
-    "googleapis": "~0.6.1"
+    "googleapis": "~0.6.1",
+    "forever": "~0.10.11",
+    "bower": "~1.2.8"
   },
   "devDependencies": {
     "supertest": "latest",
